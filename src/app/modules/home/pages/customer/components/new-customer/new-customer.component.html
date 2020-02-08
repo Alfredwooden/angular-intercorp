@@ -1,4 +1,28 @@
 <div class="new-customer">
 
+  <form class="example-form" [formGroup]="formGroup" (ngSubmit)="submit()">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Apellido" formControlName="surname">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Edad" formControlName="age">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="birth_date" [matDatepicker]="picker" placeholder="Fecha de nacimiento">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+  </form>
+  <!--
+  <span *ngIf="formGroup.controls.deadline.hasError('required')">
+    <p>Checkear datos</p>
+  </span> -->
 
 </div>
