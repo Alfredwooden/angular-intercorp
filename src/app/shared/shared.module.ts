@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
+import { MatNativeDateModule, ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -29,7 +32,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     // Material exports
@@ -45,7 +51,14 @@ import { MatSelectModule } from '@angular/material/select';
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
+  providers: [
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
+  ]
+
 })
 export class SharedModule { }
