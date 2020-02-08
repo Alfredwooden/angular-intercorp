@@ -46,6 +46,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/cdk/"
+              },
               "src/styles.scss"
             ],
             "scripts": []
