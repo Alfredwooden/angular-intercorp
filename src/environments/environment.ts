@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAfiWja1btBiVEkHF13rVzKZYZIpepoiR0',
+    authDomain: 'intercorp-techinterview.firebaseapp.com',
+    databaseURL: 'https://intercorp-techinterview.firebaseio.com',
+    projectId: 'intercorp-techinterview',
+    storageBucket: 'intercorp-techinterview.appspot.com',
+    messagingSenderId: '874190888160',
+    appId: '1:874190888160:web:b160d0cc9dcdb6e4d54485'
+  }
 };
 
 /*
