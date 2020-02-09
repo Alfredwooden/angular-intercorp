@@ -21,6 +21,7 @@ export interface CustomerDetail {
 export class CustomerListComponent implements OnInit {
 
   displayedColumns: string[] = ['name', 'surname', 'age', 'birth_date'];
+  // ageAverage = 0;
 
   private CustomerCollection: AngularFirestoreCollection<CustomerDetail>;
   customers: Observable<CustomerDetail[]>;
@@ -29,18 +30,19 @@ export class CustomerListComponent implements OnInit {
   constructor(private fs: FirebaseService, private afs: AngularFirestore) {
     this.CustomerCollection = afs.collection<CustomerDetail>('customers');
     this.customers = this.CustomerCollection.valueChanges();
+
   }
 
   ngOnInit() {
-    // this.fs.getCustomers().subscribe(res => {
+    this.AgeAvg();
+  }
 
-    //   const arraylindo = res.map(item => item.payload.doc.data());
+  public AgeAvg() {
 
-
-    //   console.log(arraylindo);
-
-    // });
-
+    const values = []
+    const sum = values.reduce((previous, current) => current += previous);
+    this.ageAverage = sum / values.length;
+    console.log(this.ageAverage);
 
   }
 
