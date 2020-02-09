@@ -1,4 +1,17 @@
 .customer {
-  display: flex;
-  justify-content: space-around;
+
+// display: grid;
+// justify-content: center;
+// align-items: flex;
+
+  &__new-customer {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &customer-list {
+    padding: 20px;
+
+    margin-bottom: 20px;
+  }
 }
