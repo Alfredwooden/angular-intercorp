@@ -29,5 +29,6 @@ export class NewCustomerModel {
     return customerGroup;
 
   }
+
 }
 

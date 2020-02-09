@@ -19,7 +19,15 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
+    <div class="row submit-button-container">
+      <div class="col-md-4">
+        <button mat-raised-button class="submit-button" color="primary" type="submit"
+          [disabled]="!formGroup.valid">Create</button>
+      </div>
+    </div>
   </form>
+
+
   <!--
   <span *ngIf="formGroup.controls.deadline.hasError('required')">
     <p>Checkear datos</p>

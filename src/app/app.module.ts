@@ -9,6 +9,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
+import { FirebaseService } from './shared/services/firebase.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,7 @@ import { environment } from '../environments/environment';
     AngularFirestoreModule,
     HomeModule
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
