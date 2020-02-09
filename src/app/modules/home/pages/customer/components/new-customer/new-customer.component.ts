@@ -18,14 +18,11 @@ export class NewCustomerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.firebaseService.getUsers().subscribe(res => {
-    //   console.log(res[0].payload.doc.data());
-    // });
 
   }
 
   submit() {
-    this.firebaseService.createUser(this.formGroup.value)
+    this.firebaseService.createCustomer(this.formGroup.value)
       .then(
         res => {
           console.log(res);

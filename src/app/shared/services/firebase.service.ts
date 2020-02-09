@@ -8,19 +8,18 @@ export class FirebaseService {
 
   constructor(public db: AngularFirestore) { }
 
-  getUser(userKey) {
+  getCustomer(userKey) {
     return this.db.collection('customers').doc(userKey).snapshotChanges();
   }
 
-  getUsers() {
+  getCustomers() {
     return this.db.collection('customers').snapshotChanges();
   }
 
-  createUser(value) {
+  createCustomer(value) {
     return this.db.collection('customers').add({
       name: value.name,
       surname: value.surname,
-      // tslint:disable-next-line: radix
       age: value.age,
       birth_date: value.birth_date,
     });

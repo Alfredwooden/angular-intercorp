@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { MatNativeDateModule, ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,6 +24,7 @@ import { MatSelectModule } from '@angular/material/select';
     BrowserAnimationsModule,
     MatSliderModule,
     MatButtonModule,
+    MatListModule,
     MatGridListModule,
     MatCardModule,
     MatTableModule,
@@ -44,6 +46,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
+    MatListModule,
     MatTableModule,
     MatDatepickerModule,
     MatDialogModule,
