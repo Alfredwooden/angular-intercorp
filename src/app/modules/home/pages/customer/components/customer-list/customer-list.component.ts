@@ -21,7 +21,7 @@ export interface CustomerDetail {
 export class CustomerListComponent implements OnInit {
 
   displayedColumns: string[] = ['name', 'surname', 'age', 'birth_date'];
-  // ageAverage = 0;
+  ageAverage = 0;
 
   private CustomerCollection: AngularFirestoreCollection<CustomerDetail>;
   customers: Observable<CustomerDetail[]>;
@@ -34,17 +34,17 @@ export class CustomerListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.AgeAvg();
+    // this.AgeAvg();
   }
 
-  public AgeAvg() {
+  // public AgeAvg() {
 
-    const values = []
-    const sum = values.reduce((previous, current) => current += previous);
-    this.ageAverage = sum / values.length;
-    console.log(this.ageAverage);
+  //   const values = []
+  //   const sum = values.reduce((previous, current) => current += previous);
+  //   this.ageAverage = sum / values.length;
+  //   console.log(this.ageAverage);
 
-  }
+  // }
 
 
 }
